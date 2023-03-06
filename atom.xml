@@ -6,7 +6,7 @@
   <link href="https://setinsung.github.io/atom.xml" rel="self"/>
   
   <link href="https://setinsung.github.io/"/>
-  <updated>2023-03-05T17:44:24.992Z</updated>
+  <updated>2023-03-06T17:21:06.810Z</updated>
   <id>https://setinsung.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>23-03-06</title>
-    <link href="https://setinsung.github.io/blog/23-03-06/"/>
-    <id>https://setinsung.github.io/blog/23-03-06/</id>
+    <title>整理书签</title>
+    <link href="https://setinsung.github.io/blog/2023-03-07-journal/"/>
+    <id>https://setinsung.github.io/blog/2023-03-07-journal/</id>
+    <published>2023-03-06T17:16:45.000Z</published>
+    <updated>2023-03-06T17:21:06.810Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理书签的思考</p><span id="more"></span><h4 id="整理书签"><a href="#整理书签" class="headerlink" title="整理书签"></a>整理书签</h4><p>浏览器书签断断续续存了好多了，可能达到上千个了，以前的存放方式感觉不太行，所以要整理，然而整理就要花费很多时间了。</p><p>就是因为一开始如果没有做好书签的存放位置和层次，后面就得一个一个看过来，导致这个麻烦的发生。不过还有原因应该是平时保存的一些文章类型的书签没有及时消化掉，而是直接丢到了书签文件夹里去。</p><p>这个问题在b站视频的收藏中也存在，很多人说“收藏从未停止，学习从未开始”，一个视频觉得不错就把它收藏了但是没有去看，那和没有收藏没啥区别。我以前也是收藏了很多的b站视频，后来意识到了这个问题。</p><p>现在的做法就是遇到一个好的视频，但是当前没有时间去看，就可以直接添加到稍后观看里去，这样我就会经常想起来去看完这个视频，所以现在收藏视频变得越来越少了。</p><p>不过还是难免会遇到稍后观看也吃灰的问题。我觉得这个问题的底层可能跟拖延症有关，我自己也是喜欢拖延的人，这个习惯真的不好，会导致很多应该要做的事没有及时完成，然后导致后续要做的事不断错位。</p><p>这个要想改正也只能看自己了。整理书签也不能马上整理完，需要每天持续一点点地整理了。</p><p>有一个插件或许有点作用，这个插件能间隔一段时间随机找一个书签然后提示出来，让我对它进行处理。可能对整理书签有些帮助</p><ul><li><a href="https://microsoftedge.microsoft.com/addons/detail/%E6%B8%A9%E6%95%85%E7%9F%A5%E6%96%B0/pibjmfgfgamgohlaehhhbdkjboaopjkj">温故知新 - Microsoft Edge Addons</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;整理书签的思考&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日记" scheme="https://setinsung.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="journal" scheme="https://setinsung.github.io/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间消耗、一周结束</title>
+    <link href="https://setinsung.github.io/blog/2023-03-06-journal/"/>
+    <id>https://setinsung.github.io/blog/2023-03-06-journal/</id>
     <published>2023-03-05T17:42:52.000Z</published>
-    <updated>2023-03-05T17:44:24.992Z</updated>
+    <updated>2023-03-06T16:23:24.573Z</updated>
     
     <content type="html"><![CDATA[<p>对于时间的消耗，以及上课一周结束的思考</p><span id="more"></span><h4 id="时间消耗"><a href="#时间消耗" class="headerlink" title="时间消耗"></a>时间消耗</h4><p>这个周末，说实话，摆烂了好多，然后又在折腾各种乱七八糟的东西，时间花费了很多。其实我觉得，折腾东西是挺有意思的，但是可能是有一个曲线在，后面如果一直没办法解决问题，就会感觉无聊，想放弃了。唉，自己解决问题的速度还是太慢了，也是自己太菜的原因吧，还是得更多的学习才行。</p><p>对于学校课程，我的计划是还要去学一些东西的，但是其实寒假以及返校考试的时间段时就摆烂了，看来我真的是一个喜欢浪费时间的人。而且，看到很多人能充分利用好碎片时间，我就发现了自己没有这个能力，有时候就是一小段时间，觉得反正就那么点时间，干脆就休息吧！于是就休息了。</p><p>然后还有一个就是晚上熬夜，我基本上都是1点后睡觉了，这个只能说可能是因为事情太多，或者有什么事没做完，就顺带熬夜了。熬夜确实不太好，希望以后能早点睡觉吧。</p><h4 id="一周结束"><a href="#一周结束" class="headerlink" title="一周结束"></a>一周结束</h4><p>上课一周结束了，这周因为是第一周还不知道后面的险恶吧，还算轻松，也许比上学期会轻松点。这周完成的事不算多，代码也没怎么写。下周加油了</p>]]></content>
     
@@ -39,8 +60,8 @@
   
   <entry>
     <title>WSL的安装和简单使用</title>
-    <link href="https://setinsung.github.io/blog/WSL%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
-    <id>https://setinsung.github.io/blog/WSL%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://setinsung.github.io/blog/2023-03-05-install-and-simple-use--WSL/"/>
+    <id>https://setinsung.github.io/blog/2023-03-05-install-and-simple-use--WSL/</id>
     <published>2023-03-04T18:15:53.000Z</published>
     <updated>2023-03-05T17:17:17.184Z</updated>
     
@@ -54,16 +75,16 @@
     <category term="Linux" scheme="https://setinsung.github.io/categories/linux/"/>
     
     
-    <category term="Linux" scheme="https://setinsung.github.io/tags/linux/"/>
-    
     <category term="vscode" scheme="https://setinsung.github.io/tags/vscode/"/>
+    
+    <category term="Linux" scheme="https://setinsung.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>使用vscode编写C#代码</title>
-    <link href="https://setinsung.github.io/blog/%E4%BD%BF%E7%94%A8vscode%E7%BC%96%E5%86%99CSharp/"/>
-    <id>https://setinsung.github.io/blog/%E4%BD%BF%E7%94%A8vscode%E7%BC%96%E5%86%99CSharp/</id>
+    <link href="https://setinsung.github.io/blog/2023-03-03-write-csharp-with-vscode/"/>
+    <id>https://setinsung.github.io/blog/2023-03-03-write-csharp-with-vscode/</id>
     <published>2023-03-02T17:33:12.000Z</published>
     <updated>2023-03-04T18:13:13.097Z</updated>
     
@@ -77,16 +98,16 @@
     <category term="DOTNET" scheme="https://setinsung.github.io/categories/dotnet/"/>
     
     
-    <category term="vscode" scheme="https://setinsung.github.io/tags/vscode/"/>
-    
     <category term="C#" scheme="https://setinsung.github.io/tags/c/"/>
+    
+    <category term="vscode" scheme="https://setinsung.github.io/tags/vscode/"/>
     
   </entry>
   
   <entry>
     <title>C#基础语法速成</title>
-    <link href="https://setinsung.github.io/blog/CSharp%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E6%88%90/"/>
-    <id>https://setinsung.github.io/blog/CSharp%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E6%88%90/</id>
+    <link href="https://setinsung.github.io/blog/2023-03-02-CSharp-Basic-Grammar/"/>
+    <id>https://setinsung.github.io/blog/2023-03-02-CSharp-Basic-Grammar/</id>
     <published>2023-03-01T16:52:27.000Z</published>
     <updated>2023-03-05T02:41:08.284Z</updated>
     
@@ -106,8 +127,8 @@
   
   <entry>
     <title>开始</title>
-    <link href="https://setinsung.github.io/blog/%E5%BC%80%E5%A7%8B/"/>
-    <id>https://setinsung.github.io/blog/%E5%BC%80%E5%A7%8B/</id>
+    <link href="https://setinsung.github.io/blog/2023-02-28-start/"/>
+    <id>https://setinsung.github.io/blog/2023-02-28-start/</id>
     <published>2023-02-28T14:59:27.000Z</published>
     <updated>2023-03-03T17:59:09.817Z</updated>
     
