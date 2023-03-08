@@ -20,21 +20,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>整理书签 - Setinsung</title>
+  <title>PowerShell7的安装和简单使用 - Setinsung</title>
 
   
-    <meta name="description" content="整理书签的思考">
+    <meta name="description" content="针对PowerShell7的简单安装和配置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="整理书签">
-<meta property="og:url" content="https://setinsung.github.io/blog/2023-03-07-journal/">
+<meta property="og:title" content="PowerShell7的安装和简单使用">
+<meta property="og:url" content="https://setinsung.github.io/blog/2023-03-09-install-powershell/">
 <meta property="og:site_name" content="Setinsung">
-<meta property="og:description" content="整理书签的思考">
+<meta property="og:description" content="针对PowerShell7的简单安装和配置">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-06T17:16:45.000Z">
-<meta property="article:modified_time" content="2023-03-06T17:21:06.810Z">
+<meta property="article:published_time" content="2023-03-08T17:05:32.000Z">
+<meta property="article:modified_time" content="2023-03-08T17:12:02.153Z">
 <meta property="article:author" content="Setinsung">
-<meta property="article:tag" content="journal">
-<meta name="twitter:card" content="summary">
+<meta property="article:tag" content="PowerShell">
+<meta name="twitter:card" content="summary_large_image">
   
   
 
@@ -87,7 +87,7 @@
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">整理书签</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B4%E7%90%86%E4%B9%A6%E7%AD%BE"><span class="toc-text">整理书签</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">PowerShell7的安装和简单使用</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-PowerShell%E7%AE%80%E4%BB%8B"><span class="toc-text">1.PowerShell简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85PowerShell7"><span class="toc-text">2.安装PowerShell7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-PowerShell%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-text">3.PowerShell的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-NF%E5%AD%97%E4%BD%93"><span class="toc-text">3.1 NF字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%AE%89%E8%A3%85Oh-My-Posh-%E5%92%8C%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-text">3.2 安装Oh My Posh 和主题配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85"><span class="toc-text">3.3 模块安装</span></a></li></ol></li></ol></div></div></widget>
 
 
 
@@ -102,23 +102,95 @@
       
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-03-06T17:16:45.000Z">2023年3月7日</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/powershell/">PowerShell</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-03-08T17:05:32.000Z">2023年3月9日</time></div></div>
 
 <article class='md-text content post'>
-<h1 class="article-title"><span>整理书签</span></h1>
-<p>整理书签的思考</p>
+<h1 class="article-title"><span>PowerShell7的安装和简单使用</span></h1>
+<p>针对PowerShell7的简单安装和配置</p>
 <span id="more"></span>
 
-<h4 id="整理书签"><a href="#整理书签" class="headerlink" title="整理书签"></a>整理书签</h4><p>浏览器书签断断续续存了好多了，可能达到上千个了，以前的存放方式感觉不太行，所以要整理，然而整理就要花费很多时间了。</p>
-<p>就是因为一开始如果没有做好书签的存放位置和层次，后面就得一个一个看过来，导致这个麻烦的发生。不过还有原因应该是平时保存的一些文章类型的书签没有及时消化掉，而是直接丢到了书签文件夹里去。</p>
-<p>这个问题在b站视频的收藏中也存在，很多人说“收藏从未停止，学习从未开始”，一个视频觉得不错就把它收藏了但是没有去看，那和没有收藏没啥区别。我以前也是收藏了很多的b站视频，后来意识到了这个问题。</p>
-<p>现在的做法就是遇到一个好的视频，但是当前没有时间去看，就可以直接添加到稍后观看里去，这样我就会经常想起来去看完这个视频，所以现在收藏视频变得越来越少了。</p>
-<p>不过还是难免会遇到稍后观看也吃灰的问题。我觉得这个问题的底层可能跟拖延症有关，我自己也是喜欢拖延的人，这个习惯真的不好，会导致很多应该要做的事没有及时完成，然后导致后续要做的事不断错位。</p>
-<p>这个要想改正也只能看自己了。整理书签也不能马上整理完，需要每天持续一点点地整理了。</p>
-<p>有一个插件或许有点作用，这个插件能间隔一段时间随机找一个书签然后提示出来，让我对它进行处理。可能对整理书签有些帮助</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/%E6%B8%A9%E6%95%85%E7%9F%A5%E6%96%B0/pibjmfgfgamgohlaehhhbdkjboaopjkj">温故知新 - Microsoft Edge Addons</a></li>
+<h1 id="PowerShell7"><a href="#PowerShell7" class="headerlink" title="PowerShell7"></a>PowerShell7</h1><h2 id="1-PowerShell简介"><a href="#1-PowerShell简介" class="headerlink" title="1.PowerShell简介"></a>1.PowerShell简介</h2><ul>
+<li>PowerShell全称 Windows Power Shell，是一种命令行外壳程序和脚本环境，使命令行用户和脚本编写者可以利用.NET Framework的强大功能来执行一些操作</li>
+<li>之前使用WSL时针对Windows Terminal集成的默认的PowerShell进行了配置，默认的PowerShell也叫 <strong>Windows PowerShell 5.1</strong> ，是在 <strong>.NET Framework v4.5</strong> 基础上构建的</li>
+<li>但是现在的 <strong>PowerShell 7.x</strong> 也称为 **Powershell Core **，打开默认的PowerShell会打印微软的推荐：<ul>
+<li>尝试新的跨平台 PowerShell <a target="_blank" rel="noopener" href="https://aka.ms/pscore6">https://aka.ms/pscore6</a></li>
+<li>听名字就知道它是基于<strong>跨平台且开源的.NET Core</strong> 构建的。因为跨平台，当然也可以在Linux上使用</li>
 </ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-安装PowerShell7"><a href="#2-安装PowerShell7" class="headerlink" title="2.安装PowerShell7"></a>2.安装PowerShell7</h2><p>现在最新的PowerShell7.3基于2022年11月8日发布的**.NET 7**，当然也可以选择下载LTS版本等</p>
+<p><strong>安装步骤</strong></p>
+<ul>
+<li><p>直接去github下载并安装release：<a target="_blank" rel="noopener" href="https://github.com/PowerShell/PowerShell">PowerShell&#x2F;PowerShell: PowerShell for every system! (github.com)</a></p>
+</li>
+<li><p>安装界面的功能都可勾上</p>
+</li>
+<li><p>安装完成后，Windows Terminal就会自动集成PowerShell7，有了PowerShell7，Windows Terminal就可以选择使用PowerShell7为默认启动配置了</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-PowerShell的配置"><a href="#3-PowerShell的配置" class="headerlink" title="3.PowerShell的配置"></a>3.PowerShell的配置</h2><h3 id="3-1-NF字体"><a href="#3-1-NF字体" class="headerlink" title="3.1 NF字体"></a>3.1 NF字体</h3><ul>
+<li>首先还是需要有一个NF字体，因为默认字体不支持之后要配置的部分主题格式</li>
+<li>若之前使用Windows Terminal时已经安装了NF字体就不需要下载了，以下网站中随便选一个字体下载安装：<ul>
+<li><a target="_blank" rel="noopener" href="https://www.nerdfonts.com/">https://www.nerdfonts.com</a></li>
+<li>然后使用管理员身份打开Windows Terminal，<code>Ctrl+ shift+,</code> 打开wt的<strong>settings.json</strong></li>
+<li>对其中的 <strong>profiles.defaults下</strong> 添加以下字体配置，face设置的就是刚刚下载的字体名，最后保存即可</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;profiles&quot;</span><span class="punctuation">:</span> </span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;defaults&quot;</span><span class="punctuation">:</span> </span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;font&quot;</span><span class="punctuation">:</span> </span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;face&quot;</span><span class="punctuation">:</span> <span class="string">&quot;下载的字体名&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-2-安装Oh-My-Posh-和主题配置"><a href="#3-2-安装Oh-My-Posh-和主题配置" class="headerlink" title="3.2 安装Oh My Posh 和主题配置"></a>3.2 安装Oh My Posh 和主题配置</h3><ul>
+<li><p>Oh My Posh的已经<strong>不再支持PowerShell模块</strong>，因此不能再使用以下的方式安装</p>
+<ul>
+<li><code>Install-Module oh-my-posh -Scope CurrentUser -SkipPublisherCheck</code></li>
+<li>如果之前是这样安装的，需要参考Oh My Posh的迁移方案：<a target="_blank" rel="noopener" href="https://ohmyposh.dev/docs/migrating">https://ohmyposh.dev/docs/migrating</a></li>
+<li>记得要删除之前的模块：<code>Uninstall-Module oh-my-posh -AllVersions</code></li>
+</ul>
+</li>
+<li><p>以下使用winget方式安装</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">winget install oh-my-posh</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>然后输入<code>notepad $PROFILE</code>打开PowerShell的配置文件，添加如下命令。重启后即可成功配置Oh My Posh<ul>
+<li>可在Oh My Posh的官方文档中选择主题：<a target="_blank" rel="noopener" href="https://ohmyposh.dev/docs/themes">https://ohmyposh.dev/docs/themes</a></li>
+<li>更换主题只需修改<code>xxxx.omp.json</code>即可</li>
+<li>退出后重新进入，可见配置生效</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">oh-my-posh init pwsh --config <span class="string">&quot;<span class="variable">$env</span>:POSH_THEMES_PATH\jandedobbeleer.omp.json&quot;</span> | Invoke-Expression</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-3-模块安装"><a href="#3-3-模块安装" class="headerlink" title="3.3 模块安装"></a>3.3 模块安装</h3><ul>
+<li>首先安装PSReadLine，用于命令自动提示</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>然后安装文件图标库，显示文件时可显示文件的颜色以及图标</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Install-Module -Name Terminal-Icons -Repository PSGallery</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>接下来就要在PowerShell的启动前参数中配置</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">oh-my-posh init pwsh --config <span class="string">&quot;<span class="variable">$env</span>:POSH_THEMES_PATH\jandedobbeleer.omp.json&quot;</span> | Invoke-Expression</span><br><span class="line"><span class="comment"># 导入文件图标模块</span></span><br><span class="line">Import-Module -Name Terminal-Icons</span><br><span class="line"><span class="comment"># 命令行提示Tab选择功能</span></span><br><span class="line">Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>此时即配置完成</li>
+</ul>
+<blockquote>
+<ul>
+<li>如果觉得打开速度慢，可以不导入文件图标模块</li>
+</ul>
+</blockquote>
 
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
@@ -126,7 +198,7 @@
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/blog/2023-03-09-install-powershell/">PowerShell7的安装和简单使用</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/2023-03-06-journal/">时间消耗、一周结束</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/2023-03-07-journal/">整理书签</a></div></section></div>
 
 
 

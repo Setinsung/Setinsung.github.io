@@ -6,7 +6,7 @@
   <link href="https://setinsung.github.io/atom.xml" rel="self"/>
   
   <link href="https://setinsung.github.io/"/>
-  <updated>2023-03-06T17:21:06.810Z</updated>
+  <updated>2023-03-08T17:12:02.153Z</updated>
   <id>https://setinsung.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PowerShell7的安装和简单使用</title>
+    <link href="https://setinsung.github.io/blog/2023-03-09-install-powershell/"/>
+    <id>https://setinsung.github.io/blog/2023-03-09-install-powershell/</id>
+    <published>2023-03-08T17:05:32.000Z</published>
+    <updated>2023-03-08T17:12:02.153Z</updated>
+    
+    <content type="html"><![CDATA[<p>针对PowerShell7的简单安装和配置</p><span id="more"></span><h1 id="PowerShell7"><a href="#PowerShell7" class="headerlink" title="PowerShell7"></a>PowerShell7</h1><h2 id="1-PowerShell简介"><a href="#1-PowerShell简介" class="headerlink" title="1.PowerShell简介"></a>1.PowerShell简介</h2><ul><li>PowerShell全称 Windows Power Shell，是一种命令行外壳程序和脚本环境，使命令行用户和脚本编写者可以利用.NET Framework的强大功能来执行一些操作</li><li>之前使用WSL时针对Windows Terminal集成的默认的PowerShell进行了配置，默认的PowerShell也叫 <strong>Windows PowerShell 5.1</strong> ，是在 <strong>.NET Framework v4.5</strong> 基础上构建的</li><li>但是现在的 <strong>PowerShell 7.x</strong> 也称为 **Powershell Core **，打开默认的PowerShell会打印微软的推荐：<ul><li>尝试新的跨平台 PowerShell <a href="https://aka.ms/pscore6">https://aka.ms/pscore6</a></li><li>听名字就知道它是基于<strong>跨平台且开源的.NET Core</strong> 构建的。因为跨平台，当然也可以在Linux上使用</li></ul></li></ul><hr><h2 id="2-安装PowerShell7"><a href="#2-安装PowerShell7" class="headerlink" title="2.安装PowerShell7"></a>2.安装PowerShell7</h2><p>现在最新的PowerShell7.3基于2022年11月8日发布的**.NET 7**，当然也可以选择下载LTS版本等</p><p><strong>安装步骤</strong></p><ul><li><p>直接去github下载并安装release：<a href="https://github.com/PowerShell/PowerShell">PowerShell&#x2F;PowerShell: PowerShell for every system! (github.com)</a></p></li><li><p>安装界面的功能都可勾上</p></li><li><p>安装完成后，Windows Terminal就会自动集成PowerShell7，有了PowerShell7，Windows Terminal就可以选择使用PowerShell7为默认启动配置了</p></li></ul><hr><h2 id="3-PowerShell的配置"><a href="#3-PowerShell的配置" class="headerlink" title="3.PowerShell的配置"></a>3.PowerShell的配置</h2><h3 id="3-1-NF字体"><a href="#3-1-NF字体" class="headerlink" title="3.1 NF字体"></a>3.1 NF字体</h3><ul><li>首先还是需要有一个NF字体，因为默认字体不支持之后要配置的部分主题格式</li><li>若之前使用Windows Terminal时已经安装了NF字体就不需要下载了，以下网站中随便选一个字体下载安装：<ul><li><a href="https://www.nerdfonts.com/">https://www.nerdfonts.com</a></li><li>然后使用管理员身份打开Windows Terminal，<code>Ctrl+ shift+,</code> 打开wt的<strong>settings.json</strong></li><li>对其中的 <strong>profiles.defaults下</strong> 添加以下字体配置，face设置的就是刚刚下载的字体名，最后保存即可</li></ul></li></ul><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;profiles&quot;</span><span class="punctuation">:</span> </span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;defaults&quot;</span><span class="punctuation">:</span> </span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;font&quot;</span><span class="punctuation">:</span> </span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;face&quot;</span><span class="punctuation">:</span> <span class="string">&quot;下载的字体名&quot;</span></span><br></pre></td></tr></table></figure><h3 id="3-2-安装Oh-My-Posh-和主题配置"><a href="#3-2-安装Oh-My-Posh-和主题配置" class="headerlink" title="3.2 安装Oh My Posh 和主题配置"></a>3.2 安装Oh My Posh 和主题配置</h3><ul><li><p>Oh My Posh的已经<strong>不再支持PowerShell模块</strong>，因此不能再使用以下的方式安装</p><ul><li><code>Install-Module oh-my-posh -Scope CurrentUser -SkipPublisherCheck</code></li><li>如果之前是这样安装的，需要参考Oh My Posh的迁移方案：<a href="https://ohmyposh.dev/docs/migrating">https://ohmyposh.dev/docs/migrating</a></li><li>记得要删除之前的模块：<code>Uninstall-Module oh-my-posh -AllVersions</code></li></ul></li><li><p>以下使用winget方式安装</p></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">winget install oh-my-posh</span><br></pre></td></tr></table></figure><ul><li>然后输入<code>notepad $PROFILE</code>打开PowerShell的配置文件，添加如下命令。重启后即可成功配置Oh My Posh<ul><li>可在Oh My Posh的官方文档中选择主题：<a href="https://ohmyposh.dev/docs/themes">https://ohmyposh.dev/docs/themes</a></li><li>更换主题只需修改<code>xxxx.omp.json</code>即可</li><li>退出后重新进入，可见配置生效</li></ul></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">oh-my-posh init pwsh --config <span class="string">&quot;<span class="variable">$env</span>:POSH_THEMES_PATH\jandedobbeleer.omp.json&quot;</span> | Invoke-Expression</span><br></pre></td></tr></table></figure><h3 id="3-3-模块安装"><a href="#3-3-模块安装" class="headerlink" title="3.3 模块安装"></a>3.3 模块安装</h3><ul><li>首先安装PSReadLine，用于命令自动提示</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck</span><br></pre></td></tr></table></figure><ul><li>然后安装文件图标库，显示文件时可显示文件的颜色以及图标</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Install-Module -Name Terminal-Icons -Repository PSGallery</span><br></pre></td></tr></table></figure><ul><li>接下来就要在PowerShell的启动前参数中配置</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">oh-my-posh init pwsh --config <span class="string">&quot;<span class="variable">$env</span>:POSH_THEMES_PATH\jandedobbeleer.omp.json&quot;</span> | Invoke-Expression</span><br><span class="line"><span class="comment"># 导入文件图标模块</span></span><br><span class="line">Import-Module -Name Terminal-Icons</span><br><span class="line"><span class="comment"># 命令行提示Tab选择功能</span></span><br><span class="line">Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete</span><br></pre></td></tr></table></figure><ul><li>此时即配置完成</li></ul><blockquote><ul><li>如果觉得打开速度慢，可以不导入文件图标模块</li></ul></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;针对PowerShell7的简单安装和配置&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="PowerShell" scheme="https://setinsung.github.io/categories/powershell/"/>
+    
+    
+    <category term="PowerShell" scheme="https://setinsung.github.io/tags/powershell/"/>
+    
+  </entry>
   
   <entry>
     <title>整理书签</title>
