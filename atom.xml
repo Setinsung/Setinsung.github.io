@@ -6,7 +6,7 @@
   <link href="https://setinsung.github.io/atom.xml" rel="self"/>
   
   <link href="https://setinsung.github.io/"/>
-  <updated>2023-03-08T17:12:02.153Z</updated>
+  <updated>2023-03-09T17:05:31.124Z</updated>
   <id>https://setinsung.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客应该写什么呢</title>
+    <link href="https://setinsung.github.io/blog/2023-03-10-journal/"/>
+    <id>https://setinsung.github.io/blog/2023-03-10-journal/</id>
+    <published>2023-03-09T16:29:45.000Z</published>
+    <updated>2023-03-09T17:05:31.124Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天看到了一篇文章，讲述了博客应该要写什么</p><span id="more"></span><h4 id="博客应该写什么呢"><a href="#博客应该写什么呢" class="headerlink" title="博客应该写什么呢"></a>博客应该写什么呢</h4><p>原文地址：<a href="https://simonwillison.net/2022/Nov/6/what-to-blog-about/">What to blog about</a></p><p>这篇文章中说到了如果没有东西写，可以想一下今天学到了什么和正在做的项目。而且我觉得也完全不用勉强自己写很多字数，只需要一个行动即可。</p><p>我每天学到的东西也不多，可能不足以为了这点东西来写一个博客，但是写一下自己的某些思考应该还是不错的，一天之内随便思考点什么东西，然后随便写点什么东西，差不多了。</p><p>总之还是加油吧</p><h4 id="别的东西"><a href="#别的东西" class="headerlink" title="别的东西"></a>别的东西</h4><p>这学期又有好多麻烦的项目和任务。为什么说麻烦，因为我觉得自己的技术还只是学了点皮毛的程度，身边好多大佬对于这种项目想必是信手拈来的吧。正因为如此，还是要不断的学习和写代码才行。</p><p>首先是创新实践课，老师是网安方向的，为我们设置的方向都是网安相关，所以这学期还得学学网安，真的是从0开始学啊，不知道最后会怎么样，上学期创新实践还不是这样的</p><p>然后有一个Web应用程序设计的课，本来应该会分成.NET和Java语言两个课的，老师说由于Java版的课的一个老师因为学教评太低了，导致课开不了了，所以只有.NET开了。刚开始本来是就11个人选，后来发现另一个学院的这个课是必修，两个班凑在一起上，那就不会停课了。</p><p>其实我就是为了凑学分才选这个课的，相信很多人也是这样的。结果老师问有多少人本来要选那个没开的Java版的课的，大部分的人举手了，好像只有2个人举手本来就是选.NET。</p><p>最后就是这个课的上课方式修改了，老师说用什么语言随意，反正最后开发一个Web应用就完事了，但是还是有一些要求，现在还不太明确。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;今天看到了一篇文章，讲述了博客应该要写什么&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日记" scheme="https://setinsung.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="journal" scheme="https://setinsung.github.io/tags/journal/"/>
+    
+  </entry>
   
   <entry>
     <title>PowerShell7的安装和简单使用</title>
