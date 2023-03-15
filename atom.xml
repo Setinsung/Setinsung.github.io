@@ -6,7 +6,7 @@
   <link href="https://setinsung.github.io/atom.xml" rel="self"/>
   
   <link href="https://setinsung.github.io/"/>
-  <updated>2023-03-13T15:58:10.496Z</updated>
+  <updated>2023-03-15T15:49:05.811Z</updated>
   <id>https://setinsung.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习和远程联机</title>
+    <link href="https://setinsung.github.io/blog/2023-03-15-journal/"/>
+    <id>https://setinsung.github.io/blog/2023-03-15-journal/</id>
+    <published>2023-03-14T17:50:53.000Z</published>
+    <updated>2023-03-15T15:49:05.811Z</updated>
+    
+    <content type="html"><![CDATA[<p>学了下习，远程联机玩了下游戏</p><span id="more"></span><h4 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h4><p>学习了网络安全的基础知识，下了好几个工具，接下来就准备开始靶场练习了。</p><h4 id="外设"><a href="#外设" class="headerlink" title="外设"></a>外设</h4><p>开寝室门的时候，耳机摔坏了，这是第二个坏掉的有线耳机。</p><p>有线耳机戴着舒服一些，不然肯定用无线了，当然也是我没钱买高级的无线耳机，现在用的还不小心掉了一个，但是单只用还是凑合的。</p><p>然后，电脑爆满了，简单看了下硬盘推荐，买了个1t的移动固态硬盘。</p><p>真的是难以预料，安装的东西越来越多，特别是网安后面可能要装几个虚拟机。我使用了好几个工具清理，以及SpaceSniffer去查看容量，手动删除但是无从下手。买一个移动固态硬盘其实也不算是很好的办法。但是无所谓了。</p><h4 id="远程联机"><a href="#远程联机" class="headerlink" title="远程联机"></a>远程联机</h4><p>远程联机的解决方案有很多，我只尝试过小部分。</p><p>steam的远程畅玩需要比如uu加速器的加速，但是这个需要一定的付费。</p><p>然后是parsec，虽然免费，而且很多人推荐使用。但是移动直接把它墙了，通过更多手段用起来延迟也很高了，而且墙之前试过，校园网里使用，不知道是不是个人原因，使用起来延迟不低。</p><p>还有腾讯会议，这个还是不错的，成功玩过多次游戏，延迟小，而且免费，不过好像只能2个人使用。有时候需要3个人的场景，就不行了。</p><p>最后找到闪门，这个应该是可以多人使用的，但是之前尝试时候是2个人，打完了一把游戏。延迟不高，感觉好像还行，但是需要付费。这个费用好像能承受，之后看看3人的效果怎么样再说了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;学了下习，远程联机玩了下游戏&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日记" scheme="https://setinsung.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="journal" scheme="https://setinsung.github.io/tags/journal/"/>
+    
+  </entry>
   
   <entry>
     <title>第二周的结束</title>
