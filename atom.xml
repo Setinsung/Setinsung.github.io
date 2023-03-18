@@ -6,7 +6,7 @@
   <link href="https://setinsung.github.io/atom.xml" rel="self"/>
   
   <link href="https://setinsung.github.io/"/>
-  <updated>2023-03-15T16:56:10.657Z</updated>
+  <updated>2023-03-18T17:43:36.441Z</updated>
   <id>https://setinsung.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>远程联机成功</title>
+    <link href="https://setinsung.github.io/blog/2023-03-19-journal/"/>
+    <id>https://setinsung.github.io/blog/2023-03-19-journal/</id>
+    <published>2023-03-18T17:21:10.000Z</published>
+    <updated>2023-03-18T17:43:36.441Z</updated>
+    
+    <content type="html"><![CDATA[<p>这次对远程联机终于找到了勉强可以的方法了</p><span id="more"></span><h4 id="远程联机"><a href="#远程联机" class="headerlink" title="远程联机"></a>远程联机</h4><p>这次和朋友进行联机（本地联机游戏远程联机），测试了2天。一开始就是使用之前找到的那个远程控制软件，结果发现还是有问题。就是远程控制一个被控端一个主控端时玩起来还算流畅，但是3个人就不行了，可能是我们的网络不太行，带不动2个主控端的压力。所以最后还是赶紧换了方法了。</p><p>于是又回到了steam支持的远程同乐上，找了一个nn加速器，可以白嫖加速。这个在2个人测试时顺利打完了一局游戏，结果第二天3个人用时，直接卡成ppt，每个人互相尝试再加上steam的问题，老是断，成功连上也是卡成ppt。之前用还挺流畅，今天就不流畅了，很可能就是加速器的问题，可能是这个加速器的白嫖节点用的人太多。</p><p>后来随便找了一个叫中国移动智能加速器的，据说是腾讯加速器的换皮，不过腾讯加速器现在已经没了，可能是破解太多了哈哈哈。通过免费使用时间进行3个人远程同乐，结果还真可以玩，最后也是成功打完了一把。不过大家都折腾累了，也就不再继续玩了。</p><p>远控的办法还有很多，比如parsec之类的，加速器应该也有很多好用的。但是就目前来看，能比较流畅完整打完一局游戏，就已经满足了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这次对远程联机终于找到了勉强可以的方法了&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日记" scheme="https://setinsung.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="journal" scheme="https://setinsung.github.io/tags/journal/"/>
+    
+  </entry>
   
   <entry>
     <title>C#之模拟简单的IOC容器练习</title>
@@ -222,9 +243,9 @@
     <category term="Linux" scheme="https://setinsung.github.io/categories/linux/"/>
     
     
-    <category term="vscode" scheme="https://setinsung.github.io/tags/vscode/"/>
-    
     <category term="Linux" scheme="https://setinsung.github.io/tags/linux/"/>
+    
+    <category term="vscode" scheme="https://setinsung.github.io/tags/vscode/"/>
     
   </entry>
   
@@ -245,9 +266,9 @@
     <category term="DOTNET" scheme="https://setinsung.github.io/categories/dotnet/"/>
     
     
-    <category term="C#" scheme="https://setinsung.github.io/tags/c/"/>
-    
     <category term="vscode" scheme="https://setinsung.github.io/tags/vscode/"/>
+    
+    <category term="C#" scheme="https://setinsung.github.io/tags/c/"/>
     
   </entry>
   
