@@ -6,7 +6,7 @@
   <link href="https://setinsung.github.io/atom.xml" rel="self"/>
   
   <link href="https://setinsung.github.io/"/>
-  <updated>2023-03-18T17:43:36.441Z</updated>
+  <updated>2023-03-29T15:56:48.787Z</updated>
   <id>https://setinsung.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一次游戏汉化</title>
+    <link href="https://setinsung.github.io/blog/2023-03-29-journal/"/>
+    <id>https://setinsung.github.io/blog/2023-03-29-journal/</id>
+    <published>2023-03-28T17:02:01.000Z</published>
+    <updated>2023-03-29T15:56:48.787Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录一次游戏汉化</p><span id="more"></span><h4 id="一次游戏汉化"><a href="#一次游戏汉化" class="headerlink" title="一次游戏汉化"></a>一次游戏汉化</h4><h5 id="为什么想汉化"><a href="#为什么想汉化" class="headerlink" title="为什么想汉化"></a>为什么想汉化</h5><p>汉化一个游戏是我从来没想过的。汉化的游戏是Steam上的Crawl，这是一个多人本地联机游戏，没错之前寻找的远程联机手段就是为了玩这个游戏。</p><p>但是，虽然找到了远程联机的方法，游戏本身没有中文，还是有些不太好。这个游戏已经5年以上了，一直没有中文，也没有人去汉化。于是，我就想到了自己去汉化的想法。</p><p>事实上在3月初时，我就已经在了解相关的东西了，但是由于不太懂，断断续续地进行了尝试。而2个星期前算是正式开始汉化。刚开始的准备工作还是去找相关的方法和教程，但是这个汉化的方法真的是网上没几个。不过最后还是通过各种教程以及主动问一些大佬和自己的瞎折腾不断尝试成功了。</p><p>于是就在前面的几天中各种汉化，虽然这个游戏体量不大，内容和条目也不算多，但是一个人去汉化还是比较麻烦的，以至于我在那几天花费了所有的空闲时间去汉化这个游戏。可能我就是喜欢折腾吧，没有把一个东西搞完之前就会一直想着它，所以还是早点搞完为好。</p><h5 id="汉化的工具"><a href="#汉化的工具" class="headerlink" title="汉化的工具"></a>汉化的工具</h5><p>汉化使用到的工具太多了，有些工具可以做这件事，但是却不能做那件事之类的，往往要好多个工具同时使用。比如使用dnSpy反编译游戏的dll去找对应的代码然后修改替换，使用AssetStudio找游戏的静态资源，以及AssetBundleExtractor来对资源的导入导出，UnityEX对游戏字体的导入导出，FontCreator对字体的修改等等。对于字体，由于Crawl的字体是那种像素的英文字体，而且非常小，网上找的免费字体都不太好看，于是我花了300自己买了个中文像素字体，分别有7px和9px版的，这样就和原游戏十分适配了。（这应该是汉化这个游戏花费的全部金钱了）</p><h5 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h5><p>问题可太多了。</p><p>比如AssetBundleExtractor软件本身的bug，使用JSON格式导入导出对转义字符的输出有问题。那就需要换用txt格式导入导出。</p><p>使用Python脚本自动把JSON文件的部分文本获取然后修改再导回出现bug。这是代码写拉了，原来为空的导进去变NaN了，导致游戏直接崩了。</p><p>Unity的text不支持中文的自动换行，将中文识别为一整个英文单词，导致汉化后变成一行直接超出屏幕。这个有好几种办法，比如可以用FontCreator把游戏字体里的空格字符修改得非常小，然后用脚本把每处修改文本的每个字都加上空格，这样进入游戏后就不会显示出空格，同时因为有空格，使其支持换行了。</p><p>除此之外，还有很多非常奇怪的问题，应该是我经验不足，处理起来都花了不少时间。但是总之最后还是解决了所有的问题。</p><h5 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h5><p>最后也是把最复杂的武器、武器词条、武器魔法、武器描述汉化完成了，有些文本找不到也没办法，有些是游戏直接做的贴图和动画，那也就不搞了。总体来说大部分的直接关乎提高游戏体验的内容是汉化了，比如游戏主界面选项、设置选项、章节文本、道具名称和描述、武器名称和描述、武器随机词条、随机魔法等。</p><p>还有一点东西可以汉化，但是目前就暂告一段落了。毕竟这不是正事，只是一个为了让朋友和自己玩起来更爽、消遣得更舒适而做的事；然后同时才是惠及到他人，这个游戏也是十分的冷门，但是好玩，汉化也许能稍微增加些玩家吧。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;记录一次游戏汉化&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日记" scheme="https://setinsung.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="journal" scheme="https://setinsung.github.io/tags/journal/"/>
+    
+  </entry>
   
   <entry>
     <title>远程联机成功</title>
@@ -243,9 +264,9 @@
     <category term="Linux" scheme="https://setinsung.github.io/categories/linux/"/>
     
     
-    <category term="Linux" scheme="https://setinsung.github.io/tags/linux/"/>
-    
     <category term="vscode" scheme="https://setinsung.github.io/tags/vscode/"/>
+    
+    <category term="Linux" scheme="https://setinsung.github.io/tags/linux/"/>
     
   </entry>
   
@@ -266,9 +287,9 @@
     <category term="DOTNET" scheme="https://setinsung.github.io/categories/dotnet/"/>
     
     
-    <category term="vscode" scheme="https://setinsung.github.io/tags/vscode/"/>
-    
     <category term="C#" scheme="https://setinsung.github.io/tags/c/"/>
+    
+    <category term="vscode" scheme="https://setinsung.github.io/tags/vscode/"/>
     
   </entry>
   
