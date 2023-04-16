@@ -6,7 +6,7 @@
   <link href="https://setinsung.github.io/atom.xml" rel="self"/>
   
   <link href="https://setinsung.github.io/"/>
-  <updated>2023-04-14T17:38:13.795Z</updated>
+  <updated>2023-04-16T16:58:28.412Z</updated>
   <id>https://setinsung.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>现实</title>
+    <link href="https://setinsung.github.io/blog/2023-04-17-journal/"/>
+    <id>https://setinsung.github.io/blog/2023-04-17-journal/</id>
+    <published>2023-04-16T16:23:16.000Z</published>
+    <updated>2023-04-16T16:58:28.412Z</updated>
+    
+    <content type="html"><![CDATA[<p>有时候，有些事想法很美好，但也只是想法了</p><span id="more"></span><h4 id="有时不太现实"><a href="#有时不太现实" class="headerlink" title="有时不太现实"></a>有时不太现实</h4><p>这周，浅浅学习了下React和Ts，因为一个学校作业项目要用。我觉得学习一个东西，每个人都有自己的学习方式，不能说哪一种就是不好，哪一种就是好，毕竟人都不一样，学习方式也不一样。我一般是看视频和文档同时敲使用的案例，然后还有记一点笔记，可能这样学的速度比较慢。其实一直觉得自己理解东西的速度比较慢，有些人就很快。所以没办法，我还是多花些时间吧，既然自己理解的慢，就再去多看看多写写代码就好了。</p><p>不过，还是进度缓慢啊，学校的课程是默认直接开始写项目的，然而我觉得我需要的技术还不够，所以就先去学习了。直接去弄项目，自己如果啥都不太懂，好像不太好，过一遍需要的技术还是有必要的。这样之后也许就会越来越快了。上学期的一个简单的小项目花了我很多时间完成，感觉自己真的太菜了，写个什么东西都很慢，当然也可能是老师有几个逆天要求导致的，最后也是糊弄成功了……</p><p>还是有很多东西要学啊，得继续加油了。其实还是挺喜欢学习各种新的东西的，因为比较有趣</p><p>最后，突然想到的，对于想法的美好，还是得站在现实中考虑。摸鱼还是会经常摸的，做不到那种隔绝一切娱乐的状态，尽管渴望拥有那种隔绝世界的专注力。有时候突然心血来潮，就去和朋友玩游戏去了。所以就真正感受到了“想法的美好”与“现实的残酷”之间的落差。毕竟我不是机器不用休息，时常也需要适当放松吧。还是别太苛刻于自己了</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;有时候，有些事想法很美好，但也只是想法了&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日记" scheme="https://setinsung.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="journal" scheme="https://setinsung.github.io/tags/journal/"/>
+    
+  </entry>
   
   <entry>
     <title>时间和摸鱼</title>
