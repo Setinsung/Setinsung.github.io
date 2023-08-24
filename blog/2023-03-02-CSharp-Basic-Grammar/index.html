@@ -3,7 +3,7 @@
 
 <head>
   <meta name="generator" content="Hexo 6.3.0">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
   <meta charset="utf-8">
   
 
@@ -26,20 +26,22 @@
     <meta name="description" content="这学期突然要学C#，那就学吧。以下笔记仅作自用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C#基础语法速成">
-<meta property="og:url" content="https://setinsung.github.io/blog/2023-03-02-CSharp-Basic-Grammar/">
+<meta property="og:url" content="https://setinsung.github.io/blog/2023-03-02-csharp-basic-grammar/">
 <meta property="og:site_name" content="Setinsung">
 <meta property="og:description" content="这学期突然要学C#，那就学吧。以下笔记仅作自用">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.imgtg.com/2023/03/02/VJyqq.jpg">
 <meta property="og:image" content="https://i.imgtg.com/2023/03/02/VJgrc.jpg">
 <meta property="article:published_time" content="2023-03-01T16:52:27.000Z">
-<meta property="article:modified_time" content="2023-03-05T02:41:08.284Z">
+<meta property="article:modified_time" content="2023-08-24T10:26:02.480Z">
 <meta property="article:author" content="Setinsung">
 <meta property="article:tag" content="C#">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://i.imgtg.com/2023/03/02/VJyqq.jpg">
   
   
+  
+  <meta name="keywords" content="C#">
 
   <!-- feed -->
   
@@ -105,6 +107,7 @@
       
 
 
+
 <div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/dotnet/">DOTNET</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-03-01T16:52:27.000Z">2023年3月2日</time></div></div>
 
 <article class='md-text content post'>
@@ -112,7 +115,7 @@
 <p>这学期突然要学C#，那就学吧。以下笔记仅作自用</p>
 <span id="more"></span>
 
-<h1 id="C-基础语法速成"><a href="#C-基础语法速成" class="headerlink" title="C#基础语法速成"></a>C#基础语法速成</h1><h2 id="1-C-基本认识和特点"><a href="#1-C-基本认识和特点" class="headerlink" title="1.C#基本认识和特点"></a>1.C#基本认识和特点</h2><ul>
+<h2 id="1-C-基本认识和特点"><a href="#1-C-基本认识和特点" class="headerlink" title="1.C#基本认识和特点"></a>1.C#基本认识和特点</h2><ul>
 <li>C#是微软公司发布的一种面向对象的、运行于 <strong>.NET Framework</strong> 和 <strong>.NET Core</strong> (完全开源，跨平台）之上的高级程序设计语言。</li>
 <li>C#是一种安全的、稳定的、简单的、优雅的，由C和C++衍生出来的面向对象的编程语言。它在继承C和C++强大功能的同时去掉了一些它们的复杂特性。</li>
 <li>C#是面向对象的编程语言。</li>
@@ -141,14 +144,16 @@
 <li>就不创建控制台程序了，直接创建一个windows窗体应用，就不搞控制台应用了</li>
 <li>选择C#、Windows、桌面，找到 WPF 应用(.NET Framwork)</li>
 </ul>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.imgtg.com/2023/03/02/VJyqq.jpg" alt="VJyqq.jpg"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.imgtg.com/2023/03/02/VJyqq.jpg" style="zoom: 50%;" />
+
 <hr>
 <h3 id="2-2-VS的结构"><a href="#2-2-VS的结构" class="headerlink" title="2.2 VS的结构"></a>2.2 VS的结构</h3><ul>
 <li>一般习惯工具箱和解决方案资源管理器放在左边</li>
 <li>别的好像也没啥了，随意了</li>
 </ul>
 <hr>
-<h2 id="3-cs文件结构"><a href="#3-cs文件结构" class="headerlink" title="3.cs文件结构"></a>3.cs文件结构</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.imgtg.com/2023/03/02/VJgrc.jpg" alt="VJgrc.jpg"></p>
+<h2 id="3-cs文件结构"><a href="#3-cs文件结构" class="headerlink" title="3.cs文件结构"></a>3.cs文件结构</h2><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.imgtg.com/2023/03/02/VJgrc.jpg" style="zoom: 80%;" />
+
 <p><strong>上面程序的各个部分：</strong></p>
 <ul>
 <li><strong>using System</strong>： <strong>using 关键字</strong>：<strong>用于在程序中包含System命名空间</strong>。<strong>一个程序一般有多个using语句</strong>。</li>
@@ -266,7 +271,7 @@
 <h2 id="5-C-语法进阶"><a href="#5-C-语法进阶" class="headerlink" title="5.C#语法进阶"></a>5.C#语法进阶</h2><h3 id="5-1-表达式"><a href="#5-1-表达式" class="headerlink" title="5.1 表达式"></a>5.1 表达式</h3><ul>
 <li><p>表达式由<strong>操作数</strong>(operand)和<strong>运算符</strong>(operator)构成。运算符的示例包括 <code>＋</code>、<code>-</code> 、<code>*</code>、<code>／</code> 和 <code>new</code>。操作数的示例包括<strong>文本</strong>、<strong>字段</strong>、<strong>局部变量</strong>和<strong>表达式</strong>。</p>
 </li>
-<li><p>当表达式包含多个运算符时，运算符的<strong>优先级</strong>(precedence)控制各运算符的计算顺序。例如，表达式x+y*z按x + (y * z)计算，因为＊运算符的优先级高于＋运算符。</p>
+<li><p>当表达式包含多个运算符时，运算符的<strong>优先级</strong>(precedence)控制各运算符的计算顺序。例如，表达式x+y<em>z按x + (y</em> z)计算，因为＊运算符的优先级高于＋运算符。</p>
 </li>
 <li><p>（了解）大多数运算符都可以<strong>重载</strong>(overload,)。运算符重载允许指定用户定义的运算符实现来执行运算这些运算的操作数中至少有一个，甚至所有操作数都属于用户定义的类类型或结构类型。</p>
 </li>
@@ -519,8 +524,6 @@
 </ul>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(Convert.ToInt32(<span class="number">4.3</span>));<span class="comment">//四舍五入，输出4</span></span><br><span class="line">Console.WriteLine(Convert.ToInt32(<span class="number">4.5</span>));<span class="comment">//第一位小数为5时，4.5在4和5之间，输出偶数4</span></span><br><span class="line">Console.WriteLine(Convert.ToInt32(<span class="number">4.53</span>));<span class="comment">//四舍五入，输出5</span></span><br><span class="line">Console.WriteLine(Convert.ToInt32(<span class="number">5.3</span>));<span class="comment">//四舍五入，输出5</span></span><br><span class="line">Console.WriteLine(Convert.ToInt32(<span class="number">5.5</span>));<span class="comment">//第一位小数为5时，5.5在5和6之间，输出偶数6</span></span><br><span class="line">Console.WriteLine(Convert.ToInt32(<span class="number">5.53</span>));<span class="comment">//四舍五入，输出6</span></span><br></pre></td></tr></table></figure>
 
-
-
 <hr>
 <h3 id="5-5-函数"><a href="#5-5-函数" class="headerlink" title="5.5 函数"></a>5.5 函数</h3><ul>
 <li>函数好比是对象的<strong>动作行为</strong>。</li>
@@ -540,8 +543,6 @@
 <li>函数返回值可以认为是外部调用某种行为后得到的一种反馈。</li>
 </ul>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 加法方法</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;firstCount&quot;&gt;</span>数字1<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;secondCount&quot;&gt;</span>数字2<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">Add</span>(<span class="params"><span class="built_in">int</span> firstCount, <span class="built_in">int</span> secondCount</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">int</span> total = firstCount + secondCount;</span><br><span class="line">    <span class="keyword">return</span> total;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
 
 <h4 id="5-5-1-参数修饰符"><a href="#5-5-1-参数修饰符" class="headerlink" title="5.5.1 参数修饰符"></a>5.5.1 参数修饰符</h4><p>①<strong>无修饰符</strong>：如果一个参数<strong>没有用参数修饰符标记</strong>，则认为它将<strong>按值进行传递</strong>，这将意味着被调用的方法收到原始数据的一份<strong>副本</strong>。</p>
 <ul>
@@ -948,10 +949,6 @@
 </ul>
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">List&lt;<span class="built_in">int</span>&gt; listInt = <span class="keyword">new</span> List&lt;<span class="built_in">int</span>&gt; &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> &#125;;</span><br><span class="line"><span class="keyword">foreach</span> (<span class="keyword">var</span> item <span class="keyword">in</span> listInt)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
-
-
 <blockquote>
 <ul>
 <li>那么至此C#大概常用的简单语法就学完了</li>
@@ -959,12 +956,13 @@
 </blockquote>
 
 
+
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div></section></div>
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/blog/2023-03-03-write-csharp-with-vscode/">使用vscode编写C#代码</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/2023-02-28-start/">开始</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/blog/2023-03-03-csharp-with-vscode/">使用vscode编写C#代码</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/2023-02-28-start/">开始</a></div></section></div>
 
 
 
@@ -1050,6 +1048,9 @@
     // 从 butterfly 和 volantis 获得灵感
     loadScript: (src, opt) => new Promise((resolve, reject) => {
       var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
       script.src = src;
       if (opt) {
         for (let key of Object.keys(opt)) {
@@ -1078,8 +1079,8 @@
       }
     }
   };
-  stellar.version = '1.18.5';
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
   stellar.config = {
     date_suffix: {
       just: '刚刚',
@@ -1088,6 +1089,7 @@
       day: '天前',
       month: '个月前',
     },
+    root : '/',
   };
 
   // required plugins (only load if needs)
@@ -1126,6 +1128,9 @@
   }
   if ('false' == 'true') {
     stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
   }
 </script>
 
