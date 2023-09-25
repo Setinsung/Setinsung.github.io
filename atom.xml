@@ -6,7 +6,7 @@
   <link href="https://setinsung.github.io/atom.xml" rel="self"/>
   
   <link href="https://setinsung.github.io/"/>
-  <updated>2023-09-15T03:08:17.527Z</updated>
+  <updated>2023-09-25T03:27:52.503Z</updated>
   <id>https://setinsung.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github学生认证和免费订阅Azure并使用</title>
+    <link href="https://setinsung.github.io/blog/2023-09-24-github-azure/"/>
+    <id>https://setinsung.github.io/blog/2023-09-24-github-azure/</id>
+    <published>2023-09-23T17:26:51.000Z</published>
+    <updated>2023-09-25T03:27:52.503Z</updated>
+    
+    <content type="html"><![CDATA[<p>Github进行学生认证，然后用来免费订阅Azure，比如可以用来创建虚拟机。以下仅为个人的成功步骤。</p><span id="more"></span><h2 id="1-Github学生认证"><a href="#1-Github学生认证" class="headerlink" title="1.Github学生认证"></a>1.Github学生认证</h2><h3 id="1-1-准备学校邮箱和个人信息"><a href="#1-1-准备学校邮箱和个人信息" class="headerlink" title="1.1 准备学校邮箱和个人信息"></a>1.1 准备学校邮箱和个人信息</h3><ul><li>首先在github中打开<a href="https://github.com/settings/emails">Email settings</a>，<strong>Add email address</strong>添加学校的<strong>edu邮箱地址</strong>。</li></ul><img src="https://ooo.0x0.ooo/2023/09/25/OnVp06.png" alt="1695573406204" style="zoom: 67%;" /><ul><li>然后再打开<a href="https://github.com/settings/profile">Your Profile</a>，其中基本是填写学校和个人相关的信息，为了通过<strong>github的机器识别</strong>。具体更改内容如下：<ul><li><strong>Name</strong>：修改为自己真实姓名的英文机翻。</li><li><strong>Public email</strong>：修改为刚刚添加的学校邮箱。</li><li><strong>URL</strong>：填入自己学校的官网链接。</li><li><strong>Company</strong>：填入自己学校的英文名称。</li></ul></li></ul><h3 id="1-2-学信网准备材料"><a href="#1-2-学信网准备材料" class="headerlink" title="1.2 学信网准备材料"></a>1.2 学信网准备材料</h3><ul><li>这里的步骤网上也比较多，打开<a href="https://www.chsi.com.cn/">中国高等教育学生信息网</a>并登录，选择<strong>在线验证报告</strong>，然后选择<strong>教育部学籍在线验证报告</strong>查看即可。</li><li>注意github的机器识别无法识别中文，可使用浏览器自带的翻译把打开页面中的<strong>报告机翻成英文再截图</strong>。</li></ul><img src="https://ooo.0x0.ooo/2023/09/25/OnVPMP.png" alt="1695574171720" style="zoom: 67%;" /><h3 id="1-3-进行认证"><a href="#1-3-进行认证" class="headerlink" title="1.3 进行认证"></a>1.3 进行认证</h3><ul><li><p>直接打开<a href="https://education.github.com/discount_requests/application">Request a discount - GitHub Education</a>页面，填写以下内容：</p><ul><li>**What e-mail address do you use for school?**：选择之前添加的学校邮箱后应该会自动识别出学校名称。</li><li>**What is the name of your school?**：填写学校的英文名称。上面和现在这两项一般github会自动识别不用填写。</li><li>**How do you plan to use GitHub?**：简单写一些内容比如学习使用等。</li></ul></li><li><p>点击<strong>Continue</strong>进入新页面后，显示**Please upload proof of your academic status.**即需要上传之前准备的学信网材料。</p><ul><li>上传还有一个<strong>Proof Type</strong>需要选择，选择第一个即可。</li></ul></li></ul><img src="https://ooo.0x0.ooo/2023/09/25/OnVHzB.png" alt="1695575387741" style="zoom:50%;" /><ul><li>接下来提交申请即可，github会先花一定时间进行机器识别检测，通过上传的材料和github个人信息以及学校信息等等进行比对。<ul><li>如果这里出错，将会直接被Rejected。</li><li>如果成功了，将会进入人工识别处理，需要等待几天，github会把结果发送到邮箱，在那时通过了就可以享受学生认证的权益了。</li></ul></li></ul><blockquote><ul><li>通过github学生认证后可以用的东西很多，但是接下来只针对如何获得微软azure的学生订阅记录。</li></ul></blockquote><h2 id="2-Azure学生订阅"><a href="#2-Azure学生订阅" class="headerlink" title="2.Azure学生订阅"></a>2.Azure学生订阅</h2><h3 id="2-1-Azure学生订阅的问题"><a href="#2-1-Azure学生订阅的问题" class="headerlink" title="2.1 Azure学生订阅的问题"></a>2.1 Azure学生订阅的问题</h3><ul><li>如果直接使用微软账号进行申请，会直接显示当前地区服务不可用。因为微软停掉了对国内Azure for students订阅的支持。</li><li>但是github学生认证的权益中还是包含azure的，所以可以使用成功学生认证通过的github账号登录Azure进行学生订阅的获取。<ul><li>以下没有通过找客服发送邮件的方式通过认证，只需点击即可完成。</li></ul></li></ul><h3 id="2-2-基本步骤"><a href="#2-2-基本步骤" class="headerlink" title="2.2 基本步骤"></a>2.2 基本步骤</h3><ul><li>（前置条件是github学生认证通过）首先打开申请页面<a href="https://azure.microsoft.com/zh-cn/free/students/">面向学生的 Azure</a>，然后点击<strong>免费开始使用</strong>。</li></ul><img src="https://ooo.0x0.ooo/2023/09/25/OnVtHl.png" alt="1695576273971" style="zoom: 50%;" /><ul><li>然后将会显示要求登录。选择<strong>使用Github登录</strong>。注意需要登录的github账号已经通过了学生认证。<ul><li>如果此时自动使用了之前的账号登录并进行了自动跳转，那么推荐改用浏览器的无痕模式重新进行步骤。</li></ul></li></ul><img src="https://ooo.0x0.ooo/2023/09/25/OnVR7b.png" alt="1695576414008" style="zoom:50%;" /><ul><li>登录后会要求进行<strong>学生验证</strong>，这里直接输入和github认证时使用的相同<strong>学校电子邮件</strong></li></ul><img src="https://ooo.0x0.ooo/2023/09/25/OnV4Xg.png" alt="1695577113826" style="zoom:50%;" /><ul><li>之后学校邮箱将会接收到一个微软发来的邮件，下面会有一个确认链接复制到之前打开的无痕浏览器中打开确认。</li></ul><div class="tag-plugin image"><div class="image-bg"><img src="https://ooo.0x0.ooo/2023/09/25/OnVLJs.png" alt="1695577563732"/></div><div class="image-meta"><span class="image-caption center">1695577563732</span></div></div><ul><li>然后会进入一个页面进行验证，这里检测真人后点击<strong>Verify</strong>按钮，学术地位验证就通过了。<ul><li>之后可能还会有一个页面要求选择，但是好像随便选择一个就好了。</li></ul></li></ul><img src="https://ooo.0x0.ooo/2023/09/25/OnVElK.png" alt="1695577716953" style="zoom:50%;" /><ul><li>进入<a href="https://portal.azure.com/#home">主页 - Microsoft Azure</a>可见包含了学生订阅，说明学生认证通过。查看<a href="https://www.microsoftazuresponsorships.com/">Microsoft Azure Sponsorships</a>拥有100刀的额度。</li></ul><h3 id="2-3-快速创建一个虚拟机"><a href="#2-3-快速创建一个虚拟机" class="headerlink" title="2.3 快速创建一个虚拟机"></a>2.3 快速创建一个虚拟机</h3><ul><li>点击azure个人主页上面Azure服务栏中的<strong>虚拟机</strong>图标，然后点击<strong>创建</strong>。</li><li>在现在这个<strong>基本</strong>栏中，需要填写或更改的有：<ul><li><strong>资源组</strong>：自定义名称。</li><li><strong>虚拟机名称</strong>：自定义名称。</li><li><strong>区域</strong>：可以选择东亚，服务器在香港。</li><li><strong>安全类型</strong>：可以选择标准。</li><li><strong>映像</strong>：这里选择了ubuntu。</li><li><strong>大小</strong>：选择经济型的B1s简单使用。</li><li><strong>管理员账户</strong>：可使用SSH身份验证，那么也需要创建一个自定义的密钥对名称。</li><li><strong>入站端口</strong>：默认只开放22，还可开放80用于浏览器访问。</li></ul></li></ul><img src="https://ooo.0x0.ooo/2023/09/25/OnVQTa.png" alt="1695578833107" style="zoom: 67%;" /><img src="https://ooo.0x0.ooo/2023/09/25/OnVSZS.png" alt="1695578978463" style="zoom: 67%;" /><ul><li>进入<strong>磁盘</strong>栏，磁盘类型可选择高级SSD。</li></ul><img src="https://ooo.0x0.ooo/2023/09/25/OnV0cN.png" alt="1695579187283" style="zoom:67%;" /><ul><li>接下来的<strong>网络</strong>栏，<strong>管理</strong>栏，<strong>监视</strong>栏，都可不做修改仅测试使用。</li><li>最后创建虚拟机，同时下载SSH私钥到本地。等待部署完成后，可在终端使用ssh命令连接。</li></ul><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh <span class="literal">-i</span> ~/.ssh/xxx.pem azuser@xx.xx.xx</span><br></pre></td></tr></table></figure><blockquote><ul><li>不想使用可删除所有刚刚创建出来的资源。</li><li>如果想要长期使用，根据百度可以将默认的30GB磁盘改成64GB，关闭监视中的诊断服务，以及静态ip改为动态ip等降低额度消耗。</li></ul></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Github进行学生认证，然后用来免费订阅Azure，比如可以用来创建虚拟机。以下仅为个人的成功步骤。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="方法" scheme="https://setinsung.github.io/categories/%E6%96%B9%E6%B3%95/"/>
+    
+    
+    <category term="github" scheme="https://setinsung.github.io/tags/github/"/>
+    
+    <category term="azure" scheme="https://setinsung.github.io/tags/azure/"/>
+    
+  </entry>
   
   <entry>
     <title>UserAgent判断判断移动端</title>

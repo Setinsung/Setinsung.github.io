@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Github学生认证和免费订阅Azure并使用 - Setinsung</title>
+
+  
+    <meta name="description" content="Github进行学生认证，然后用来免费订阅Azure，比如可以用来创建虚拟机。以下仅为个人的成功步骤。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github学生认证和免费订阅Azure并使用">
+<meta property="og:url" content="https://setinsung.github.io/blog/2023-09-24-github-azure/">
+<meta property="og:site_name" content="Setinsung">
+<meta property="og:description" content="Github进行学生认证，然后用来免费订阅Azure，比如可以用来创建虚拟机。以下仅为个人的成功步骤。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnVp06.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnVPMP.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnVHzB.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnVtHl.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnVR7b.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnV4Xg.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnVLJs.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnVElK.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnVQTa.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnVSZS.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2023/09/25/OnV0cN.png">
+<meta property="article:published_time" content="2023-09-23T17:26:51.000Z">
+<meta property="article:modified_time" content="2023-09-25T03:27:52.503Z">
+<meta property="article:author" content="Setinsung">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="azure">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ooo.0x0.ooo/2023/09/25/OnVp06.png">
+  
+  
+  
+  <meta name="keywords" content="github,azure">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Setinsung" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://i.imgtg.com/2023/03/02/VJAbU.jpg">
+  
+
+  
+
+  
+
+
+  
+    
+      <link href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" rel="stylesheet">
+    
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://i.imgtg.com/2023/03/02/VJAbU.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Setinsung</div><div class="sub normal cap">重新开始一个博客</div><div class="sub hover cap" style="opacity:0"> 希望今年不会摆烂</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">博客</a><a class="nav-item" href="/notes/">记录</a><a class="nav-item" href="/about/">更多</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Github学生认证和免费订阅Azure并使用</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81"><span class="toc-text">1.Github学生认证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%87%86%E5%A4%87%E5%AD%A6%E6%A0%A1%E9%82%AE%E7%AE%B1%E5%92%8C%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF"><span class="toc-text">1.1 准备学校邮箱和个人信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%AD%A6%E4%BF%A1%E7%BD%91%E5%87%86%E5%A4%87%E6%9D%90%E6%96%99"><span class="toc-text">1.2 学信网准备材料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E8%BF%9B%E8%A1%8C%E8%AE%A4%E8%AF%81"><span class="toc-text">1.3 进行认证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Azure%E5%AD%A6%E7%94%9F%E8%AE%A2%E9%98%85"><span class="toc-text">2.Azure学生订阅</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Azure%E5%AD%A6%E7%94%9F%E8%AE%A2%E9%98%85%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">2.1 Azure学生订阅的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="toc-text">2.2 基本步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">2.3 快速创建一个虚拟机</span></a></li></ol></li></ol></div></div></widget>
+
+
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%96%B9%E6%B3%95/">方法</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-09-23T17:26:51.000Z">2023年9月24日</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>Github学生认证和免费订阅Azure并使用</span></h1>
+<p>Github进行学生认证，然后用来免费订阅Azure，比如可以用来创建虚拟机。以下仅为个人的成功步骤。</p>
+<span id="more"></span>
+
+<h2 id="1-Github学生认证"><a href="#1-Github学生认证" class="headerlink" title="1.Github学生认证"></a>1.Github学生认证</h2><h3 id="1-1-准备学校邮箱和个人信息"><a href="#1-1-准备学校邮箱和个人信息" class="headerlink" title="1.1 准备学校邮箱和个人信息"></a>1.1 准备学校邮箱和个人信息</h3><ul>
+<li>首先在github中打开<a target="_blank" rel="noopener" href="https://github.com/settings/emails">Email settings</a>，<strong>Add email address</strong>添加学校的<strong>edu邮箱地址</strong>。</li>
+</ul>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnVp06.png" alt="1695573406204" style="zoom: 67%;" />
+
+<ul>
+<li>然后再打开<a target="_blank" rel="noopener" href="https://github.com/settings/profile">Your Profile</a>，其中基本是填写学校和个人相关的信息，为了通过<strong>github的机器识别</strong>。具体更改内容如下：<ul>
+<li><strong>Name</strong>：修改为自己真实姓名的英文机翻。</li>
+<li><strong>Public email</strong>：修改为刚刚添加的学校邮箱。</li>
+<li><strong>URL</strong>：填入自己学校的官网链接。</li>
+<li><strong>Company</strong>：填入自己学校的英文名称。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-学信网准备材料"><a href="#1-2-学信网准备材料" class="headerlink" title="1.2 学信网准备材料"></a>1.2 学信网准备材料</h3><ul>
+<li>这里的步骤网上也比较多，打开<a target="_blank" rel="noopener" href="https://www.chsi.com.cn/">中国高等教育学生信息网</a>并登录，选择<strong>在线验证报告</strong>，然后选择<strong>教育部学籍在线验证报告</strong>查看即可。</li>
+<li>注意github的机器识别无法识别中文，可使用浏览器自带的翻译把打开页面中的<strong>报告机翻成英文再截图</strong>。</li>
+</ul>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnVPMP.png" alt="1695574171720" style="zoom: 67%;" />
+
+<h3 id="1-3-进行认证"><a href="#1-3-进行认证" class="headerlink" title="1.3 进行认证"></a>1.3 进行认证</h3><ul>
+<li><p>直接打开<a target="_blank" rel="noopener" href="https://education.github.com/discount_requests/application">Request a discount - GitHub Education</a>页面，填写以下内容：</p>
+<ul>
+<li>**What e-mail address do you use for school?**：选择之前添加的学校邮箱后应该会自动识别出学校名称。</li>
+<li>**What is the name of your school?**：填写学校的英文名称。上面和现在这两项一般github会自动识别不用填写。</li>
+<li>**How do you plan to use GitHub?**：简单写一些内容比如学习使用等。</li>
+</ul>
+</li>
+<li><p>点击<strong>Continue</strong>进入新页面后，显示**Please upload proof of your academic status.**即需要上传之前准备的学信网材料。</p>
+<ul>
+<li>上传还有一个<strong>Proof Type</strong>需要选择，选择第一个即可。</li>
+</ul>
+</li>
+</ul>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnVHzB.png" alt="1695575387741" style="zoom:50%;" />
+
+<ul>
+<li>接下来提交申请即可，github会先花一定时间进行机器识别检测，通过上传的材料和github个人信息以及学校信息等等进行比对。<ul>
+<li>如果这里出错，将会直接被Rejected。</li>
+<li>如果成功了，将会进入人工识别处理，需要等待几天，github会把结果发送到邮箱，在那时通过了就可以享受学生认证的权益了。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>通过github学生认证后可以用的东西很多，但是接下来只针对如何获得微软azure的学生订阅记录。</li>
+</ul>
+</blockquote>
+<h2 id="2-Azure学生订阅"><a href="#2-Azure学生订阅" class="headerlink" title="2.Azure学生订阅"></a>2.Azure学生订阅</h2><h3 id="2-1-Azure学生订阅的问题"><a href="#2-1-Azure学生订阅的问题" class="headerlink" title="2.1 Azure学生订阅的问题"></a>2.1 Azure学生订阅的问题</h3><ul>
+<li>如果直接使用微软账号进行申请，会直接显示当前地区服务不可用。因为微软停掉了对国内Azure for students订阅的支持。</li>
+<li>但是github学生认证的权益中还是包含azure的，所以可以使用成功学生认证通过的github账号登录Azure进行学生订阅的获取。<ul>
+<li>以下没有通过找客服发送邮件的方式通过认证，只需点击即可完成。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-基本步骤"><a href="#2-2-基本步骤" class="headerlink" title="2.2 基本步骤"></a>2.2 基本步骤</h3><ul>
+<li>（前置条件是github学生认证通过）首先打开申请页面<a target="_blank" rel="noopener" href="https://azure.microsoft.com/zh-cn/free/students/">面向学生的 Azure</a>，然后点击<strong>免费开始使用</strong>。</li>
+</ul>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnVtHl.png" alt="1695576273971" style="zoom: 50%;" />
+
+<ul>
+<li>然后将会显示要求登录。选择<strong>使用Github登录</strong>。注意需要登录的github账号已经通过了学生认证。<ul>
+<li>如果此时自动使用了之前的账号登录并进行了自动跳转，那么推荐改用浏览器的无痕模式重新进行步骤。</li>
+</ul>
+</li>
+</ul>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnVR7b.png" alt="1695576414008" style="zoom:50%;" />
+
+<ul>
+<li>登录后会要求进行<strong>学生验证</strong>，这里直接输入和github认证时使用的相同<strong>学校电子邮件</strong></li>
+</ul>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnV4Xg.png" alt="1695577113826" style="zoom:50%;" />
+
+<ul>
+<li>之后学校邮箱将会接收到一个微软发来的邮件，下面会有一个确认链接复制到之前打开的无痕浏览器中打开确认。</li>
+</ul>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnVLJs.png" alt="1695577563732"/></div><div class="image-meta"><span class="image-caption center">1695577563732</span></div></div>
+
+<ul>
+<li>然后会进入一个页面进行验证，这里检测真人后点击<strong>Verify</strong>按钮，学术地位验证就通过了。<ul>
+<li>之后可能还会有一个页面要求选择，但是好像随便选择一个就好了。</li>
+</ul>
+</li>
+</ul>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnVElK.png" alt="1695577716953" style="zoom:50%;" />
+
+<ul>
+<li>进入<a target="_blank" rel="noopener" href="https://portal.azure.com/#home">主页 - Microsoft Azure</a>可见包含了学生订阅，说明学生认证通过。查看<a target="_blank" rel="noopener" href="https://www.microsoftazuresponsorships.com/">Microsoft Azure Sponsorships</a>拥有100刀的额度。</li>
+</ul>
+<h3 id="2-3-快速创建一个虚拟机"><a href="#2-3-快速创建一个虚拟机" class="headerlink" title="2.3 快速创建一个虚拟机"></a>2.3 快速创建一个虚拟机</h3><ul>
+<li>点击azure个人主页上面Azure服务栏中的<strong>虚拟机</strong>图标，然后点击<strong>创建</strong>。</li>
+<li>在现在这个<strong>基本</strong>栏中，需要填写或更改的有：<ul>
+<li><strong>资源组</strong>：自定义名称。</li>
+<li><strong>虚拟机名称</strong>：自定义名称。</li>
+<li><strong>区域</strong>：可以选择东亚，服务器在香港。</li>
+<li><strong>安全类型</strong>：可以选择标准。</li>
+<li><strong>映像</strong>：这里选择了ubuntu。</li>
+<li><strong>大小</strong>：选择经济型的B1s简单使用。</li>
+<li><strong>管理员账户</strong>：可使用SSH身份验证，那么也需要创建一个自定义的密钥对名称。</li>
+<li><strong>入站端口</strong>：默认只开放22，还可开放80用于浏览器访问。</li>
+</ul>
+</li>
+</ul>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnVQTa.png" alt="1695578833107" style="zoom: 67%;" />
+
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnVSZS.png" alt="1695578978463" style="zoom: 67%;" />
+
+<ul>
+<li>进入<strong>磁盘</strong>栏，磁盘类型可选择高级SSD。</li>
+</ul>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://ooo.0x0.ooo/2023/09/25/OnV0cN.png" alt="1695579187283" style="zoom:67%;" />
+
+<ul>
+<li>接下来的<strong>网络</strong>栏，<strong>管理</strong>栏，<strong>监视</strong>栏，都可不做修改仅测试使用。</li>
+<li>最后创建虚拟机，同时下载SSH私钥到本地。等待部署完成后，可在终端使用ssh命令连接。</li>
+</ul>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh <span class="literal">-i</span> ~/.ssh/xxx.pem azuser@xx.xx.xx</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li>不想使用可删除所有刚刚创建出来的资源。</li>
+<li>如果想要长期使用，根据百度可以将默认的30GB磁盘改成64GB，关闭监视中的诊断服务，以及静态ip改为动态ip等降低额度消耗。</li>
+</ul>
+</blockquote>
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/2023-09-15-web/">UserAgent判断判断移动端</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
